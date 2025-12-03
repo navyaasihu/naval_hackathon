@@ -77,26 +77,39 @@ navguard_ml/
 
 ## Installation
 
-### Install dependencies
+#### Install dependencies
+```bash
 pip install -r requirements.txt
+```
 
-### Step 1: Generate Web Traffic Logs (creates simulated traffic containing both normal activity and attack behavior)
+#### Step 1: Generate Web Traffic Logs (creates simulated traffic containing both normal activity and attack behavior)
+```bash
 python src/log_generator.py
+```
 
-### Step 2: Extract Features (converts raw logs into numerical values required for ML processing)
+#### Step 2: Extract Features (converts raw logs into numerical values required for ML processing)
+```bash
 python src/feature_extractor.py
+```
 
-### Step 3: Train the Machine Learning Model (trains the Isolation Forest model using web traffic data)
+#### Step 3: Train the Machine Learning Model (trains the Isolation Forest model using web traffic data)
+```bash
 python src/train_model.py
+```
 
-### Detect anomalies and save it in data/anomalies.csv
+#### Detect anomalies and save it in data/anomalies.csv
+```bash
 python src/detect_anomalies.py
+```
 
-### Generate Firewall Rule Suggestions and are saved in data/suggested_rules.txt
+#### Generate Firewall Rule Suggestions and are saved in data/suggested_rules.txt
+```bash
 python src/rule_generator.py
+```
 
-### Launch Dashboard 
+#### Launch Dashboard 
+```bash
 streamlit run src/dashboard_app.py
-
+```
 
 
