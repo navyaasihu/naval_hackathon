@@ -55,23 +55,24 @@ NavGuard ML analyzes traffic patterns using Machine Learning instead of dependin
 navguard_ml/
 |
 ├── data/
-│ ├── raw_logs.csv
-│ ├── features.csv
-│ ├── anomalies.csv
-│ └── suggested_rules.txt
+│   ├── raw_logs.csv
+│   ├── features.csv
+│   ├── anomalies.csv
+│   └── suggested_rules.txt
 |
 ├── models/
-│ ├── isolation_forest.pkl
-│ └── scaler.pkl
+│   ├── isolation_forest.pkl
+│   └── scaler.pkl
 |
 ├── src/
-│ ├── log_generator.py
-│ ├── feature_extractor.py
-│ ├── train_model.py
-│ ├── detect_anomalies.py
-│ ├── rule_generator.py
-│ └── dashboard_app.py
+│   ├── log_generator.py
+│   ├── feature_extractor.py
+│   ├── train_model.py
+│   ├── detect_anomalies.py
+│   ├── rule_generator.py
+│   └── dashboard_app.py
 |
+├── Dockerfile
 ├── requirements.txt
 └── README.md
 
