@@ -44,7 +44,6 @@ NavGuard ML analyzes traffic patterns using Machine Learning instead of dependin
 | Dashboard        | Streamlit                        |
 | Data Processing  | Pandas                           |
 | Storage          | CSV Files                        |
-| Deployment       | Docker                           |
 | Firewall Support | ModSecurity (conceptual)         |
 | OS               | Linux / Windows                  |
 
@@ -69,7 +68,6 @@ navguard_ml/
 │   ├── detect_anomalies.py
 │   ├── rule_generator.py
 │   └── dashboard_app.py
-├── Dockerfile
 ├── requirements.txt
 └── README.md
 ```
