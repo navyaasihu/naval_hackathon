@@ -40,17 +40,6 @@ def extract_features():
 
     # Feature 3: is bot user agent
     df["is_bot_ua"] = df["user_agent"].apply(user_agent_is_bot)
-
-    # 🔴 OLD (problematic) rolling code – REMOVE this block:
-    # df.set_index("timestamp", inplace=True)
-    # df["requests_per_min_ip"] = (
-    #     df.groupby("ip")["ip"]
-    #       .rolling("60s")
-    #       .count()
-    #       .reset_index(level=0, drop=True)
-    # )
-
-    # ✅ NEW: per-minute bucket based count per IP (safe & simple)
     df["minute"] = df["timestamp"].dt.floor("min")
     df["requests_per_min_ip"] = (
         df.groupby(["ip", "minute"])["ip"]
@@ -77,7 +66,7 @@ def extract_features():
 
     os.makedirs("data", exist_ok=True)
     out_df.to_csv(FEATURES_PATH, index=False)
-    print(f"✅ Saved features to {FEATURES_PATH}")
+    print(f"Saved features to {FEATURES_PATH}")
 
 if __name__ == "__main__":
     extract_features()
